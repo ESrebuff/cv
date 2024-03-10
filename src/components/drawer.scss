@@ -1,0 +1,94 @@
+$hooker-s-green: #E05B6C;
+$lavender: #DADFF7;
+$gunmetal: #232C33;
+$podwer-blue: #A0C1D1;
+$french-gray: #B5B2C2;
+
+.drawer {
+    &-fixed {
+        position: fixed;
+        width: 300px;
+        margin: 0;
+        height: 100vh;
+        padding-top: 40px;
+        background-color: $gunmetal;
+        overflow: auto;
+        transition: transform 0.5s ease-in-out;
+        
+        .container-avatar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            .avatar {
+                width: 140px;
+                height: 140px;
+                border-radius: 50%;
+                border: 5px solid $french-gray;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &-fixed {
+        &.hidden {
+            transform: translateX(-100%);
+        }
+    }
+
+    &-fixed {
+        &.visible {
+            transform: translateX(0);
+        }
+    }
+}
+
+.menu {
+    padding: 0 1rem;
+
+    li {
+        margin: 0.5rem 0;
+
+        .link {
+            color: #FFFFFF;
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+
+            &:hover {
+                background-color: darken($gunmetal, 5%);
+            }
+        }
+    }
+}
+
+.content {
+    transition: margin-left 0.5s ease-in-out;
+    &.menuVisible {
+        margin-left: 300px;
+    }
+}
+
+.menuButton {
+    color: $french-gray;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    .icon {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.container-button {
+    z-index: 300;
+    position: fixed;
+    padding-left: 10px;
+    transition: width 0.5s ease-in-out;
+
+    .menuButton {
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,63 @@
+$hooker-s-green: #E05B6C;
+$lavender: #DADFF7;
+$gunmetal: #232C33;
+$podwer-blue: #A0C1D1;
+$french-gray: #B5B2C2;
+
+.hero {
+    overflow: hidden;
+    height: 100vh;
+    img {
+        width: 100%;
+        height: 100vh;
+        min-width: 600px;
+        filter: blur(4px) grayscale(40%);
+    }
+
+}
+
+.cv-header {
+    position: relative;
+    font-size: 1.2rem;
+    height: 0px;
+    top: -70vh;
+    left: 42vh;
+    color: white;
+}
+
+.cv-container {
+    background-color: blue;
+}
+
+.cv {
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.cv-section {
+    margin-top: 20px;
+}
+
+.cv-section h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+// Ajoutez plus de styles ici selon vos préférences
+
+/* Suite du fichier App.scss */
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.section-title {
+    margin-top: 30px;
+}
