@@ -1,12 +1,19 @@
-$hooker-s-green: #E05B6C;
-$lavender: #DADFF7;
-$gunmetal: #232C33;
-$podwer-blue: #A0C1D1;
-$french-gray: #B5B2C2;
+$primary-color: #2B4865; // Bleu sombre pour un look professionnel
+$secondary-color: #4997D0; // Bleu clair pour les éléments interactifs
+$background-color: #F5F7FA; // Gris très clair pour le fond
+$highlight-color: #F6B042; // Jaune-orangé pour les accents
+$text-color: #333333; // Gris foncé pour un contraste optimal
 
 .background {
-    background-image: url(assets/images/background-test.png);
-    background-position: 50% 40%;
+    &.default-img {
+        background-image: url(assets/images/background-test.png);
+    }
+
+    &.holiday-img {
+        background-image: url(assets/images/ile.jpg);
+    }
+
+    background-position: 50% 50%;
     background-size: 100%;
     height: 100vh;
     width: 100vw;
@@ -35,7 +42,7 @@ $french-gray: #B5B2C2;
 
 .cv {
     font-family: 'Arial', sans-serif;
-    max-width: 800px;
+    min-width: 100vh;
     margin: auto;
     padding: 20px;
 }

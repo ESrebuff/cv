@@ -14,12 +14,12 @@ $french-gray: #B5B2C2;
         background-color: $gunmetal;
         overflow: auto;
         transition: transform 0.5s ease-in-out;
-        
+
         .container-avatar {
             display: flex;
             justify-content: center;
             align-items: center;
-            
+
             .avatar {
                 width: 140px;
                 height: 140px;
@@ -27,6 +27,11 @@ $french-gray: #B5B2C2;
                 border: 5px solid $french-gray;
                 margin-bottom: 10px;
             }
+        }
+
+        .test {
+            position: absolute; // This positions the block relative to the nearest positioned ancestor.
+            bottom: 50px; // Anchors the block to the bottom.
         }
     }
 
@@ -65,6 +70,7 @@ $french-gray: #B5B2C2;
 
 .content {
     transition: margin-left 0.5s ease-in-out;
+
     &.menuVisible {
         margin-left: 300px;
     }

@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "./App.scss"; // Assurez-vous que le chemin soit correct
 import PersistentDrawerLeft from "./components/drawer";
 
@@ -7,9 +8,29 @@ interface SectionProps {
 }
 
 export default function App() {
+
+  const [backGroundImg, setBackGroundImg] = useState("default-img");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const position = window.pageYOffset;
+      const windowHeight = window.innerHeight;
+      if (position >= windowHeight) {
+        setBackGroundImg("holiday-img");
+      } else {
+        setBackGroundImg("default-img");
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div>
-      <div className="background"></div>
+      <div className={`background ${backGroundImg}`}></div>
       <PersistentDrawerLeft>
         <div className="hero">
           <header className="header">
@@ -171,9 +192,18 @@ export default function App() {
                 technologique.
               </p>
             </Section>
+
+            <Section title="Centres d'Intérêt">
+              <p>
+                Voyage, apprentissage continu, travail d'équipe, curiosité
+                technologique.
+              </p>
+            </Section>
           </div>
         </div>
       </PersistentDrawerLeft>
+
+
     </div>
   );
 }
